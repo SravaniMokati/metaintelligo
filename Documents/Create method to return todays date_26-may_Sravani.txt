@@ -1,0 +1,23 @@
+package assignment;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class TodayDate_Asg12_26_may {
+
+
+	public static void main(String[] args) {
+		
+		System.out.println(java.time.LocalDateTime.now());
+		
+		WriteTodaysDate();
+		
+	}
+public static void WriteTodaysDate() {
+	LocalDate today = LocalDate.now();
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+	String FormateDate = today.format(formatter);
+	System.out.println("Today date is :"+FormateDate);
+}
+}
+

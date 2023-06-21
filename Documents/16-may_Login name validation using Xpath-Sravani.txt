@@ -1,0 +1,25 @@
+package demoProject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginNameValidation {
+
+	public static void main(String[] args) {
+		 WebDriver driver = new ChromeDriver();
+		 driver.manage().window().maximize();
+		 driver.get("https://www.apsrtconline.in/oprs-web/user/add.do");
+		 driver.findElement(By.linkText("eTicket Login")).click();
+		 driver.findElement(By.linkText("SignUp")).click();
+		String ExpectedLoginName = "Login Name";
+	String ActuvalLoginName	= driver.findElement(By.xpath("//td[@class='formlabel']")).getText();
+		 
+     if(ExpectedLoginName.equalsIgnoreCase(ActuvalLoginName)) {
+    	 System.out.println("valid Login field name.");
+     }else {
+    	 System.out.println("Invalid Login field Name.");
+     }
+	}
+
+}

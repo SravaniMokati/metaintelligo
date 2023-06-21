@@ -1,0 +1,32 @@
+package demoProject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Tsrtc_dynamicListBox {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        
+        driver.get("https://www.tsrtconline.in/oprs-web/user/add.do");
+        driver.findElement(By.linkText("eTicket Login")).click();
+        driver.findElement(By.linkText("SignUp")).click();
+        String findstate ="ANDH";
+        String state ="ANDHRA PRADESH";
+        String Xpath ="//a[text()='"+state+"']";
+       
+        State(driver,findstate,Xpath );
+        
+        
+	}
+public static void State(WebDriver driver,String state,String Xpath) throws InterruptedException {
+	  
+    driver.findElement(By.name("stateName")).sendKeys(state);
+    Thread.sleep(800);
+    driver.findElement(By.xpath(Xpath)).click();
+}
+	
+}

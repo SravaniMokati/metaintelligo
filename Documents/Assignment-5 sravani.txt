@@ -1,0 +1,58 @@
+package demoProject;
+
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+public class Handeling_Staticbox {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver = new EdgeDriver();
+		
+		driver.get("https://www.tsrtconline.in/oprs-web/");
+		driver.findElement(By.linkText("eTicket Login")).click();
+		driver.findElement(By.linkText("SignUp")).click();
+		
+		//driver.findElement(By.id("genderId"));
+		Select gender = new Select(driver.findElement(By.id("genderId"))) ;
+		gender.selectByIndex(1);
+		List <WebElement> g = gender.getOptions();
+		for(WebElement gen : g) {
+			System.out.println(gen.getText());
+		}
+		
+		Select nation = new Select(driver.findElement(By.cssSelector("select#nationalityId"))) ;
+		nation.selectByIndex(1);
+		List <WebElement> g1 = nation.getOptions();
+		for(WebElement na : g1) {
+			System.out.println(na.getText());
+		}
+		  
+		
+		Select country = new Select(driver.findElement(By.id("countryCode"))) ;
+		country.selectByIndex(0);
+		List <WebElement> g3 = country.getOptions();
+		for(WebElement na : g3) {
+			System.out.println(na.getText());
+		}
+		
+		
+		
+		Select idcardtype = new Select(driver.findElement(By.name("proofTypeId")));
+		
+		idcardtype.selectByIndex(1);
+		
+	List<WebElement> option	=idcardtype.getOptions();
+	
+	for(WebElement i :option) {
+		System.out.println(i.getText());
+	}
+		
+		
+		  
+	}
+
+}

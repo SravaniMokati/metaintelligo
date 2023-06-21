@@ -1,0 +1,131 @@
+ body{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family:sans-serif ;
+}
+html{
+scroll-behavior: smooth;
+}
+section{
+    width:100% ;
+    height:100hv ;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right:0 ;
+    left:0 ;
+    background:rgb(248, 222, 180) ;
+    box-shadow:0 10 20px rgba(0,0,0,0,5) ;
+    z-index:1000 ;
+    margin: 2px 4px 2px 4px ;
+}
+section nav .logo img{
+    width: 100px;
+    cursor: pointer; 
+    margin:7px 0 ;
+}
+section nav ul{
+list-style:none ;
+}
+section nav ul li{
+    display: inline-block;
+    margin:0 15px ;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 17px; ;
+}
+section.main{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: relative;
+    top:130px ;
+}.main_text{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ section .main .main_text h1 span{
+    margin-left:15px ;
+    color:#fac031 ;
+    font-family:mv boil;
+    line-height: 22px;
+    font-size: 70px; ;
+ }
+section p{
+   width:650px ;
+   text-align: left; 
+}
+.btn{
+    position: relative;
+    cursor: pointer;
+}
+/* about */
+* .about{
+    width:100% ;
+    height: 100hv;
+    padding: 70px;
+}
+ .about .about_main{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+  .about .about_main .about_text h1 span{
+    color:#fac031;
+    margin-right:20px ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+  
+/* menu */
+ #Menu{
+    padding:25px 0 25px 0;
+ }  
+ #section{
+    padding:25px 0 25px 0;
+    text-align:center ;
+    font-size: 20PX;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+#menu_row{
+    display: flex;
+    padding:0 100px 0 100px ;
+} 
+#menu_col{
+    box-shadow:2px 2px 2px #bbb ;
+    border:1px solid #bbb ;
+    background-color: rgb(235, 226, 213);
+    margin:10px ;
+    padding:10px ;
+    flex:1;
+
+}
+#menu_col h2{
+    background-color:red ;
+    color:#fff ;
+    text-align: center;
+    padding:5px ;
+    font-family:cursive ;
+}
+#image{
+    border-radius:50% ;
+    padding:5px ;
+    border:2px solid orange ;
+}
+#image img{
+    width:50% ;
+    height:50% ;
+    border-radius:50% ;
+}
+.box{
+   display: flex; 
+   flex-direction: column;
+   align-items: center;
+   margin:5px ;
+
+}

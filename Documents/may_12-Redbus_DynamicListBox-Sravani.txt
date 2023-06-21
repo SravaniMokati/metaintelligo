@@ -1,0 +1,46 @@
+package practice;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class DynaminListbox_Redbus {
+
+	
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new EdgeDriver();
+		 driver.manage().window().maximize();
+		driver.get("https://www.redbus.in/");
+		String findfromcity="Miyapur, Hyderabad";
+		String findToCity ="Bellandur, Bangalore";
+		
+	redbus(driver,findfromcity,"from");
+	redbus(driver,findToCity,"to");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+	public static void redbus(WebDriver driver,String Cityname,String place ) throws InterruptedException {
+		String xpath ="//li[text()='"+Cityname+"']";
+		
+		
+		if(place.equalsIgnoreCase("from")) { 
+			driver.findElement(By.id("src")).sendKeys(Cityname);
+			
+		}else { 
+			driver.findElement(By.id("dest")).sendKeys(Cityname);
+			
+		}
+		Thread.sleep(500);
+		driver.findElement(By.xpath(xpath)).click();
+	
+		
+	}
+}
