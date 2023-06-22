@@ -1,9 +1,0 @@
-As a resent graduate, i'm looking for a work environment that supports both my personal as well as professional
-growth.I have gone through your company profile and learnt that your company encourages fresh talent and provides 
-good work culture. the entrepreneurial nature of a startup as well as building something from ground up, is something that really excites me. i'm looking to work at a place like yours that encourages me to take on greater responsibility to further increase my skill set..i want to be a part of your company's grouth and success. i'm really exited about your company's mission "100% customer satisfaction" and the potential impact my output could create to take your vision to the next level.
-
-Proficiency in Java, with a good understanding of its ecosystems.
-i have a knowledge of Object-Oriented Programming (OOP) Patterns and Concepts.
-i'm Familiarity with different design and architectural patterns.
-Skill for writing reusable Java libraries.
-Knowhow of Java concurrency patterns.

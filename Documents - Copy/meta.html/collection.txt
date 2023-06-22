@@ -1,9 +1,0 @@
-connection--->java.sql.connection //interface // methods
-driver manager----> getconnection() // method
-connection con = DriverManager.getConnection();
-
-
-interface name;
-Demo d = new demo();
-  name n =d;
-public class Demo implements name
