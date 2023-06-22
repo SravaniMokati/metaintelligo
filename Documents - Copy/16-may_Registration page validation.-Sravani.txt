@@ -1,0 +1,27 @@
+package demoProject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RegistrationPage_Validation {
+
+	public static void main(String[] args) {
+	 WebDriver driver = new ChromeDriver();
+     driver.manage().window().maximize();
+     
+     driver.get("https://www.tsrtconline.in/oprs-web/");
+     driver.findElement(By.linkText("eTicket Login")).click();
+     driver.findElement(By.className("alinkColor")).click();
+     
+     String ExpectedPageHeader="Registration";
+     String ActualPageHeager=driver.findElement(By.className("innerpageTitleHdead")).getText();
+     if(ExpectedPageHeader.equalsIgnoreCase(ActualPageHeager)) {
+    	 System.out.println("We are in registration page");
+     }else {
+    	 System.out.println("we are in wrong page");
+     }
+     
+	}
+
+}

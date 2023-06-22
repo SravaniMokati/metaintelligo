@@ -1,0 +1,50 @@
+package demoProject;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+public class Locators {
+
+	public static void main(String [] args) {
+		WebDriver driver =new EdgeDriver();
+		
+		driver.get("https://www.tsrtconline.in/oprs-web/");
+		driver.findElement(By.linkText("eTicket Login")).click();
+		driver.findElement(By.linkText("SignUp")).click();
+		
+
+		driver.findElement(By.id("loginName")).sendKeys("sravani@123");
+		driver.findElement(By.name("fullName")).sendKeys("Sravani mokati");
+		driver.findElement(By.cssSelector("input#email")).sendKeys("sravani123@gmail.com");
+		
+	WebElement gi =driver.findElement(By.name("genderId"));
+		Select gender = new Select(gi);
+		gender.selectByIndex(1);
+		
+		//driver.findElement(By.id("txtDob")).sendKeys("12/03/2000");
+		driver.findElement(By.xpath("//input[@name='mobileNo']")).sendKeys("6789654433");
+	
+		Select nationality = new Select(driver.findElement(By.id("nationalityId")));
+		 nationality.selectByVisibleText("NRI");
+		 
+		 driver.findElement(By.name("address1")).sendKeys("12-34A,kothapeta,andrapradesh");
+		
+		 driver.findElement(By.cssSelector("input[id='city']")).sendKeys("piler");
+		 
+		
+		 Select country = new Select(driver.findElement(By.id("countryCode")));
+		 country.selectByIndex(0);
+		 
+		 driver.findElement(By.name("stateName")).sendKeys("Andra");
+		 driver.findElement(By.id("zipCode")).sendKeys("517501");
+		// driver.findElement(By.name("proofTypeId"));
+		 Select id = new Select( driver.findElement(By.name("proofTypeId")));
+		 id.selectByVisibleText("PAN CARD");
+		 driver.findElement(By.id("idNumber")).sendKeys("896");
+		 driver.findElement(By.xpath("//input[@name='issueAuthority']")).sendKeys("64265");
+		 driver.findElement(By.name("SaveBtn")).click();
+		 
+	}
+
+}
